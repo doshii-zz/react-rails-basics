@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  username: username
+  password: password
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: accounts_development
+
+test:
+  <<: *default
+  database: accounts_test
+
+production:
+  <<: *default
+  database: accounts_production
